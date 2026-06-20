@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS × NYP Cloud Kiro Buildathon 2026</title>
+  <meta name="description" content="Build, Learn, Present. The AWS × NYP Cloud Kiro Buildathon — teams use Kiro to create real solutions for real problem statements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-aws">AWS</span>
+        <span class="nav__logo-x">×</span>
+        <span class="nav__logo-nyp">NYP</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#overview"     class="nav__link">Overview</a></li>
+        <li><a href="#dates"        class="nav__link">Dates</a></li>
+        <li><a href="#workshop"     class="nav__link">Workshop</a></li>
+        <li><a href="#problems"     class="nav__link">Problems</a></li>
+        <li><a href="#programme"    class="nav__link">Schedule</a></li>
+        <li><a href="#faq"          class="nav__link">FAQ</a></li>
+        <li><a href="#register"     class="nav__link nav__link--cta">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- Decorative large background text — invisible infrastructure metaphor -->
+    <div class="hero__bg-word" aria-hidden="true">KIRO</div>
+
+    <div class="hero__container">
+      <!-- Partner logos row -->
+      <div class="hero__logos" aria-label="Event partners">
+        <div class="logo-pill logo-pill--nyp">
+          <!-- ORGANISER: Replace inner text with <img> tag pointing to the actual NYP Cloud Computing Club logo -->
+          <span>NYP Cloud<br>Computing Club</span>
+        </div>
+        <span class="hero__logos-x" aria-hidden="true">×</span>
+        <div class="logo-pill logo-pill--aws">
+          <!-- ORGANISER: Replace inner text with <img> tag pointing to the actual AWS logo -->
+          <span>AWS</span>
+        </div>
+        <span class="hero__logos-x" aria-hidden="true">×</span>
+        <div class="logo-pill logo-pill--builder">
+          <!-- ORGANISER: Replace inner text with <img> tag pointing to the actual AWS Student Builder logo -->
+          <span>AWS Student<br>Builder</span>
+        </div>
+      </div>
+
+      <p class="hero__eyebrow">Student Buildathon 2026</p>
+
+      <h1 class="hero__title">
+        AWS <em class="hero__title-x">×</em> NYP<br>
+        <span class="hero__title-kiro">Cloud Kiro</span><br>
+        Buildathon
+      </h1>
+
+      <p class="hero__tagline">Build. Learn. Present.</p>
+
+      <p class="hero__desc">
+        Teams use <strong>Kiro</strong> — AWS's AI-powered coding assistant — to build real solutions for real problem statements.
+        No prior coding experience needed. Just curiosity, a team, and something to say.
+      </p>
+
+      <!-- Countdown timer — event date is set in script.js -->
+      <div class="hero__countdown" id="countdown" aria-live="polite" aria-label="Countdown to event">
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-days">--</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-hours">--</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-mins">--</span>
+          <span class="countdown__label">Mins</span>
+        </div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-secs">--</span>
+          <span class="countdown__label">Secs</span>
+        </div>
+      </div>
+
+      <!-- Quick event facts -->
+      <div class="hero__facts">
+        <span class="hero__fact">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          20 August 2026
+        </span>
+        <span class="hero__fact">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          10:00 AM – 5:30 PM
+        </span>
+        <span class="hero__fact">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          NYP Lecture Theatre
+        </span>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#programme" class="btn btn--primary">View Event Schedule</a>
+        <!-- Register Now scrolls to the Microsoft Forms registration section -->
+        <a href="#register"  class="btn btn--ghost">Register Now</a>
+      </div>
+    </div>
+
+    <!-- Decorative wave divider -->
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--surface)"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== QUICK INFO BAR ===== -->
+  <section class="quickinfo" id="quickinfo" aria-label="Event at a glance">
+    <div class="container">
+      <div class="quickinfo__grid">
+
+        <div class="quickinfo__card reveal">
+          <div class="quickinfo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="quickinfo__label">Event Date</div>
+          <div class="quickinfo__value">20 Aug 2026</div>
+        </div>
+
+        <div class="quickinfo__card reveal">
+          <div class="quickinfo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="quickinfo__label">Event Time</div>
+          <div class="quickinfo__value">10:00 AM – 5:30 PM</div>
+        </div>
+
+        <div class="quickinfo__card reveal">
+          <div class="quickinfo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="quickinfo__label">Venue</div>
+          <div class="quickinfo__value">NYP Lecture Theatre</div>
+        </div>
+
+        <div class="quickinfo__card reveal">
+          <div class="quickinfo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="quickinfo__label">Team Size</div>
+          <div class="quickinfo__value">2 – 4 Members</div>
+        </div>
+
+        <div class="quickinfo__card reveal">
+          <div class="quickinfo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="quickinfo__label">Problem Statements</div>
+          <div class="quickinfo__value">3 Tracks</div>
+        </div>
+
+        <div class="quickinfo__card quickinfo__card--highlight reveal">
+          <div class="quickinfo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="quickinfo__label">Kiro Workshop</div>
+          <div class="quickinfo__value">14 Aug 2026 <span class="badge badge--optional">Optional</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENT OVERVIEW ===== -->
+  <section class="overview section--alt" id="overview">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What is this?</p>
+        <h2 class="section-title">Your guide to the Buildathon</h2>
+        <p class="section-subtitle">Four things to know before you sign up. No jargon.</p>
+      </div>
+
+      <div class="overview__grid">
+
+        <div class="overview__card reveal">
+          <div class="overview__num" aria-hidden="true">01</div>
+          <div class="overview__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Get the problem statements early</h3>
+          <p>Problem statements are released before the main event on 25 July. Your team can start planning and building right away — no need to wait for event day.</p>
+        </div>
+
+        <div class="overview__card reveal">
+          <div class="overview__num" aria-hidden="true">02</div>
+          <div class="overview__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Optional starter workshop for beginners</h3>
+          <p>New to Kiro or coding? Join the free optional workshop on 14 August. We walk you through installing Kiro, building a simple app, and deploying it live — all in one afternoon.</p>
+        </div>
+
+        <div class="overview__card reveal">
+          <div class="overview__num" aria-hidden="true">03</div>
+          <div class="overview__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Present, get judged, win prizes</h3>
+          <p>On event day, present your solution in 4 minutes and answer 1 minute of Q&A from judges. The rest of the day is talks, networking, and the prize ceremony.</p>
+        </div>
+
+        <div class="overview__card reveal">
+          <div class="overview__num" aria-hidden="true">04</div>
+          <div class="overview__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>No coding background needed</h3>
+          <p>Kiro is an AI coding assistant. If you can describe what you want to build in plain English, Kiro can help you build it. Ideas and motivation are the only prerequisites.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMPORTANT DATES TIMELINE ===== -->
+  <section class="dates" id="dates">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Mark your calendar</p>
+        <h2 class="section-title">Important Dates</h2>
+        <p class="section-subtitle">All times are Singapore Time (SGT, UTC+8).</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">1 July 2026</time>
+            <h3 class="timeline__title">Sign-ups open</h3>
+            <p>Registration form goes live. Form your team and submit your preferences early — slots fill up fast.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">25 July 2026</time>
+            <h3 class="timeline__title">Problem statements released</h3>
+            <p>All three problem statements are published. Start researching, planning, and building right away.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">1 August 2026</time>
+            <h3 class="timeline__title">Team allocation confirmed</h3>
+            <p>You will receive your final team and problem statement assignment. Check your email and the Telegram group.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot timeline__dot--optional" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">14 August 2026 · 2:00 PM – 6:00 PM</time>
+            <h3 class="timeline__title">Optional Kiro Starter Workshop <span class="badge badge--optional">Optional</span></h3>
+            <p>Free, hands-on workshop for beginners. Get Kiro installed, build a simple app, and deploy it live.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">17 August 2026</time>
+            <h3 class="timeline__title">Presentation order released</h3>
+            <p>Find out exactly when your team presents. Plan your rehearsal schedule accordingly.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">19 August 2026 · 11:59 PM</time>
+            <h3 class="timeline__title">Final submission deadline</h3>
+            <p>Submit your project link before midnight. Late submissions may not be accepted by judges.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item timeline__item--main reveal">
+          <div class="timeline__dot timeline__dot--main" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="timeline__body">
+            <time class="timeline__date">20 August 2026 · 10:00 AM</time>
+            <h3 class="timeline__title">Main Showcase Day</h3>
+            <p>The big day. Present your build, impress the judges, and celebrate with your team. Arrive by 10:00 AM.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPTIONAL KIRO STARTER WORKSHOP ===== -->
+  <section class="workshop section--alt" id="workshop">
+    <div class="container">
+      <div class="workshop__header reveal">
+        <p class="section-eyebrow">Optional · 14 August 2026 · 2:00 PM – 6:00 PM</p>
+        <h2 class="section-title">Kiro Starter Workshop</h2>
+        <p class="section-subtitle">
+          For students who have not started yet, need help installing Kiro, or want a working prototype before the main event.<br>
+          No computing background required.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Free to attend</span>
+          <span class="tag">Hands-on</span>
+          <span class="tag">Beginners welcome</span>
+          <span class="tag">Bring your laptop</span>
+        </div>
+      </div>
+
+      <div class="workshop__grid">
+
+        <div class="workshop__step reveal">
+          <div class="workshop__step-num" aria-hidden="true">1</div>
+          <div class="workshop__step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Kiro setup</h3>
+          <p>Install Kiro on your laptop. Facilitators will troubleshoot on the spot so no one gets stuck.</p>
+        </div>
+
+        <div class="workshop__step reveal">
+          <div class="workshop__step-num" aria-hidden="true">2</div>
+          <div class="workshop__step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Kiro basics</h3>
+          <p>Learn how to chat with Kiro to write and edit code. No typing syntax needed to start.</p>
+        </div>
+
+        <div class="workshop__step reveal">
+          <div class="workshop__step-num" aria-hidden="true">3</div>
+          <div class="workshop__step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Build a single-file HTML app</h3>
+          <p>Use Kiro to create a complete, working web app in a single HTML file. Simple and effective.</p>
+        </div>
+
+        <div class="workshop__step reveal">
+          <div class="workshop__step-num" aria-hidden="true">4</div>
+          <div class="workshop__step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Test locally</h3>
+          <p>Open your app in a browser on your own machine and see it actually working.</p>
+        </div>
+
+        <div class="workshop__step reveal">
+          <div class="workshop__step-num" aria-hidden="true">5</div>
+          <div class="workshop__step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3>Improve &amp; debug with Kiro</h3>
+          <p>Ask Kiro to fix issues, add features, and improve the design — all in plain English.</p>
+        </div>
+
+        <div class="workshop__step reveal">
+          <div class="workshop__step-num" aria-hidden="true">6</div>
+          <div class="workshop__step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3>Publish with Netlify</h3>
+          <p>Deploy your app live on the internet for free using Netlify. Walk away with something real.</p>
+        </div>
+
+      </div>
+
+      <div class="workshop__cta reveal">
+        <!-- This button scrolls to the registration section -->
+        <a href="#register" class="btn btn--primary">Workshop Registration</a>
+        <p>Scroll to the registration section to sign up for the workshop separately.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM STATEMENTS ===== -->
+  <section class="problems" id="problems">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What you'll solve</p>
+        <h2 class="section-title">Problem Statements</h2>
+        <p class="section-subtitle">Three tracks. Each team is assigned one. You rank your preferences when you sign up.</p>
+      </div>
+
+      <div class="problems__grid">
+
+        <!-- PS 1 -->
+        <article class="ps-card reveal">
+          <div class="ps-card__top">
+            <span class="badge badge--beginner">Beginner Friendly</span>
+            <span class="ps-card__num">PS 1</span>
+          </div>
+          <h3 class="ps-card__title">Community Health Navigator</h3>
+          <p class="ps-card__desc">
+            Make it easier for residents to find and understand local health services, clinics, and wellness programmes in their neighbourhood.
+          </p>
+          <div class="ps-card__meta">
+            <div class="ps-card__meta-row">
+              <span class="ps-card__meta-label">Target users</span>
+              <span>Elderly residents, caregivers, families</span>
+            </div>
+            <div class="ps-card__meta-row">
+              <span class="ps-card__meta-label">Example ideas</span>
+              <span>Clinic finder, appointment reminder, health FAQ chatbot</span>
+            </div>
+          </div>
+          <button class="btn btn--outline btn--sm" data-modal="modal-ps1">View Details</button>
+        </article>
+
+        <!-- PS 2 -->
+        <article class="ps-card ps-card--featured reveal">
+          <div class="ps-card__top">
+            <span class="badge badge--beginner">Beginner Friendly</span>
+            <span class="ps-card__num">PS 2</span>
+          </div>
+          <h3 class="ps-card__title">Student Wellbeing Companion</h3>
+          <p class="ps-card__desc">
+            Support student mental health with a tool that helps students manage stress, track mood, or connect with campus resources.
+          </p>
+          <div class="ps-card__meta">
+            <div class="ps-card__meta-row">
+              <span class="ps-card__meta-label">Target users</span>
+              <span>NYP students, polytechnic students</span>
+            </div>
+            <div class="ps-card__meta-row">
+              <span class="ps-card__meta-label">Example ideas</span>
+              <span>Mood tracker, study-break timer, resource directory</span>
+            </div>
+          </div>
+          <button class="btn btn--outline btn--sm" data-modal="modal-ps2">View Details</button>
+        </article>
+
+        <!-- PS 3 -->
+        <article class="ps-card reveal">
+          <div class="ps-card__top">
+            <span class="badge badge--beginner">Beginner Friendly</span>
+            <span class="ps-card__num">PS 3</span>
+          </div>
+          <h3 class="ps-card__title">Campus Sustainability Tracker</h3>
+          <p class="ps-card__desc">
+            Help NYP students and staff reduce their environmental footprint with a tool that makes sustainable choices visible and easy.
+          </p>
+          <div class="ps-card__meta">
+            <div class="ps-card__meta-row">
+              <span class="ps-card__meta-label">Target users</span>
+              <span>NYP students, campus staff</span>
+            </div>
+            <div class="ps-card__meta-row">
+              <span class="ps-card__meta-label">Example ideas</span>
+              <span>Carbon footprint calculator, waste tracker, eco-challenge app</span>
+            </div>
+          </div>
+          <button class="btn btn--outline btn--sm" data-modal="modal-ps3">View Details</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM & SUBMISSION INFO ===== -->
+  <section class="team-info section--alt" id="team-info">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Rules &amp; expectations</p>
+        <h2 class="section-title">Team &amp; Submission Details</h2>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Team size</h3>
+          <p>Teams of <strong>2–4 members</strong> are recommended. Solo sign-ups may be merged with other individuals at organiser discretion.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>Capacity</h3>
+          <p>Maximum <strong>12 teams per problem statement</strong>. Sign up early to secure your preferred track.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Ranking preferences</h3>
+          <p>In the sign-up form, <strong>rank all three problem statements</strong> by preference. Organisers match teams to their first choice where possible.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>What to build</h3>
+          <p>Your final project can be a <strong>simple website or prototype</strong>. A working single-file HTML app is completely valid. Focus on solving the problem well.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>
+          </div>
+          <h3>Early start allowed</h3>
+          <p>Once problem statements are released on <strong>25 July</strong>, your team can start building immediately. There is no restriction.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3>Presentation day</h3>
+          <p>Prepare a <strong>working demo</strong> and a short presentation. You get 4 minutes to present and 1 minute for Q&A from the judges.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN EVENT PROGRAMME ===== -->
+  <section class="programme" id="programme">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">20 August 2026 · Main Event</p>
+        <h2 class="section-title">Event Programme</h2>
+        <p class="section-subtitle">Full schedule for showcase day. Arrive by 10:00 AM SGT.</p>
+      </div>
+
+      <!-- Desktop table (hidden on mobile) -->
+      <div class="programme__table-wrap reveal">
+        <table class="programme__table">
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row--setup">
+              <td class="prog-time">10:00 – 10:30</td>
+              <td><strong>Registration &amp; Settling In</strong><span class="prog-note">Find your seat, collect your event kit, and settle in</span></td>
+            </tr>
+            <tr class="row--talks">
+              <td class="prog-time">10:30 – 11:00</td>
+              <td><strong>AWS Sharing</strong><span class="prog-note">Insights from AWS on cloud computing and Kiro</span></td>
+            </tr>
+            <tr class="row--talks">
+              <td class="prog-time">11:00 – 11:20</td>
+              <td><strong>AWS Student Builder Sharing</strong><span class="prog-note">Hear from an AWS Student Builder ambassador</span></td>
+            </tr>
+            <tr class="row--talks">
+              <td class="prog-time">11:20 – 11:30</td>
+              <td><strong>NYP Cloud Computing Club Intro &amp; Event Briefing</strong><span class="prog-note">Club intro, final rules, and what to expect today</span></td>
+            </tr>
+            <tr class="row--break">
+              <td class="prog-time">11:30 – 12:00</td>
+              <td><strong>Tea Break &amp; Presenter Readiness</strong><span class="prog-note">PS 1 teams: set up your project and report to the stage area</span></td>
+            </tr>
+            <tr class="row--ps1">
+              <td class="prog-time">12:00 – 1:15</td>
+              <td><strong>Problem Statement 1 — Presentations</strong><span class="prog-note">Up to 12 teams · 6 min each (4 min presentation + 1 min Q&amp;A + 1 min changeover)</span></td>
+            </tr>
+            <tr class="row--deliberation">
+              <td class="prog-time">1:15 – 1:30</td>
+              <td><strong>Judges' Deliberation</strong><span class="prog-note">PS 1 judging. PS 2 teams: set up and report to stage area now</span></td>
+            </tr>
+            <tr class="row--ps2">
+              <td class="prog-time">1:30 – 2:45</td>
+              <td><strong>Problem Statement 2 — Presentations</strong><span class="prog-note">Up to 12 teams · 6 min each</span></td>
+            </tr>
+            <tr class="row--deliberation">
+              <td class="prog-time">2:45 – 3:00</td>
+              <td><strong>Judges' Deliberation</strong><span class="prog-note">PS 2 judging. PS 3 teams: set up and report to stage area now</span></td>
+            </tr>
+            <tr class="row--ps3">
+              <td class="prog-time">3:00 – 4:15</td>
+              <td><strong>Problem Statement 3 — Presentations</strong><span class="prog-note">Up to 12 teams · 6 min each</span></td>
+            </tr>
+            <tr class="row--buffer">
+              <td class="prog-time">4:15 – 4:30</td>
+              <td><strong>Buffer Time</strong><span class="prog-note">Reserved for any overruns or delays</span></td>
+            </tr>
+            <tr class="row--deliberation">
+              <td class="prog-time">4:30 – 5:00</td>
+              <td><strong>Final Judges' Deliberation</strong><span class="prog-note">All judges consolidate scores and decide the winners</span></td>
+            </tr>
+            <tr class="row--ceremony">
+              <td class="prog-time">5:00 – 5:30</td>
+              <td><strong>Prize Ceremony, Group Photos &amp; Closing</strong><span class="prog-note">Winners announced, group photos, thank-yous, and networking</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile schedule cards (hidden on desktop) -->
+      <div class="programme__cards">
+        <div class="sched-card sched--setup reveal"><span class="sched-time">10:00–10:30</span><span>Registration &amp; Settling In</span></div>
+        <div class="sched-card sched--talks reveal"><span class="sched-time">10:30–11:00</span><span>AWS Sharing</span></div>
+        <div class="sched-card sched--talks reveal"><span class="sched-time">11:00–11:20</span><span>AWS Student Builder Sharing</span></div>
+        <div class="sched-card sched--talks reveal"><span class="sched-time">11:20–11:30</span><span>Club Intro &amp; Event Briefing</span></div>
+        <div class="sched-card sched--break reveal"><span class="sched-time">11:30–12:00</span><span>Tea Break &amp; Presenter Readiness</span></div>
+        <div class="sched-card sched--ps1 reveal"><span class="sched-time">12:00–1:15</span><span>PS 1 Presentations</span></div>
+        <div class="sched-card sched--deliberation reveal"><span class="sched-time">1:15–1:30</span><span>Judges' Deliberation</span></div>
+        <div class="sched-card sched--ps2 reveal"><span class="sched-time">1:30–2:45</span><span>PS 2 Presentations</span></div>
+        <div class="sched-card sched--deliberation reveal"><span class="sched-time">2:45–3:00</span><span>Judges' Deliberation</span></div>
+        <div class="sched-card sched--ps3 reveal"><span class="sched-time">3:00–4:15</span><span>PS 3 Presentations</span></div>
+        <div class="sched-card sched--buffer reveal"><span class="sched-time">4:15–4:30</span><span>Buffer Time</span></div>
+        <div class="sched-card sched--deliberation reveal"><span class="sched-time">4:30–5:00</span><span>Final Judges' Deliberation</span></div>
+        <div class="sched-card sched--ceremony reveal"><span class="sched-time">5:00–5:30</span><span>Prize Ceremony &amp; Closing</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PRESENTATION GUIDE ===== -->
+  <section class="presentation section--alt" id="presentation">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">On stage</p>
+        <h2 class="section-title">Presentation Guide</h2>
+        <p class="section-subtitle">Everything you need to know before you step up to present.</p>
+      </div>
+
+      <div class="presentation__layout">
+
+        <div class="presentation__rules reveal">
+          <div class="pres-rule">
+            <div class="pres-rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="pres-rule__body">
+              <strong>4 minutes</strong>
+              <p>Present your solution and run a live demo.</p>
+            </div>
+          </div>
+          <div class="pres-rule">
+            <div class="pres-rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="pres-rule__body">
+              <strong>1 minute</strong>
+              <p>Judges ask questions. Short, honest answers are fine.</p>
+            </div>
+          </div>
+          <div class="pres-rule">
+            <div class="pres-rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="pres-rule__body">
+              <strong>1 minute changeover</strong>
+              <p>Next team sets up while judges take notes.</p>
+            </div>
+          </div>
+          <div class="pres-rule">
+            <div class="pres-rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <div class="pres-rule__body">
+              <strong>Report before your block</strong>
+              <p>All teams in a PS block must be at the stage area before that block begins.</p>
+            </div>
+          </div>
+          <div class="pres-rule">
+            <div class="pres-rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="pres-rule__body">
+              <strong>Project open before you go on stage</strong>
+              <p>Have everything loaded before you walk up. Do not log in or set up on stage.</p>
+            </div>
+          </div>
+          <div class="pres-rule">
+            <div class="pres-rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>
+            </div>
+            <div class="pres-rule__body">
+              <strong>Presentation order released 17 Aug</strong>
+              <p>Check email and Telegram for your slot. Plan your rehearsal around it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-card reveal">
+          <h3>Presentation Checklist</h3>
+          <p class="checklist-card__sub">Go through this the night before event day.</p>
+          <ul class="checklist" role="list">
+            <li><span class="check-icon" aria-hidden="true">✓</span>Project link works and loads correctly</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span>Local backup ready (USB or offline copy)</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span>Slides (if any) tested and ready</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span>Demo tested — including on event-day internet</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span>Every presenter knows their role</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span>Whole team reports to stage area before your block</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span>Presentation order reviewed and noted</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Common questions</p>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">Quick answers to things students usually ask before signing up.</p>
+      </div>
+
+      <div class="faq__list" role="list">
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            Do I need coding experience?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>No. Kiro is an AI coding assistant that writes and edits code based on what you describe in plain English. You do not need to know how to code. If you have an idea and can describe it, Kiro can help you build it.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            Do I need to attend the optional workshop?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>The workshop is completely optional. If you are already comfortable using Kiro and have a project started, you do not need to come. But if you have not installed Kiro yet, or want guided help building something from scratch, the workshop is a great starting point.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            Can I start building before the main event?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Yes — and you are encouraged to. Problem statements are released on 25 July, nearly a month before the main event. Use that time to plan, experiment, and build. There is no restriction on when you can start.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            Can I use a single HTML file?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Absolutely. A single well-made HTML file is a completely valid submission. Kiro is great at building complete apps in a single file. Focus on solving the problem well — the technology choice is up to you.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            Do I need an AWS account?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Not necessarily. Kiro can be used without deploying to AWS. You can build and host your project for free using Netlify or GitHub Pages. If you want to explore AWS services, the organisers can share guidance — but it is not required to participate.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            What happens if my team is not ready by presentation day?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Contact the organisers as early as possible — do not wait until the last minute. Even an unfinished project can be presented. Explain what you built, what you tried, and what you learned. Judges appreciate honesty and visible effort.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            Can I deploy using Netlify?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Yes. Netlify is free, beginner-friendly, and great for static websites. The Kiro Starter Workshop walks you through it. You can also use GitHub Pages or any other public hosting — as long as the judges can access your project via a link.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            How are problem statements allocated?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>When you sign up, you rank all three problem statements by preference. Organisers match each team to their first choice where possible. If a track is full, teams move to their second choice. Final allocations are confirmed by 1 August.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal" role="listitem">
+          <button class="faq__q" aria-expanded="false">
+            What should I do if I am lost or need help?
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" hidden>
+            <p>During the event, approach any organiser wearing the NYP Cloud Computing Club T-shirt. Before the event, reach out via the Telegram group or email listed in the Help section below. No question is too small.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGISTRATION ===== -->
+  <section class="register section--alt" id="register">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Sign up</p>
+        <h2 class="section-title">Registration</h2>
+        <p class="section-subtitle">Two forms: one for the main event, one for the optional workshop.</p>
+      </div>
+
+      <div class="register__grid">
+
+        <!-- Main Event Registration -->
+        <div class="reg-card reg-card--main reveal">
+          <div class="reg-card__header">
+            <div class="reg-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <h3>Register for the Buildathon</h3>
+              <p>Form teams, rank your preferred problem statements, and secure your slot for the main event.</p>
+            </div>
+          </div>
+
+          <!--
+            ================================================================
+            ORGANISER: Paste the Microsoft Forms iframe embed code below.
+            Delete the .forms-placeholder div and replace with:
+
+            <iframe
+              src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID&embed=1"
+              width="100%"
+              height="600"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              style="border: none; max-width: 100%;">
+              Loading form…
+            </iframe>
+            ================================================================
+          -->
+          <div class="forms-placeholder">
+            <div class="forms-placeholder__inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+              <span>Paste Microsoft Forms Embed Code Here</span>
+              <code>&lt;iframe src="YOUR_FORM_URL?embed=1" …&gt;&lt;/iframe&gt;</code>
+            </div>
+          </div>
+
+          <!--
+            ORGANISER: Replace href="#" with your actual Microsoft Forms URL.
+            Remove the onclick attribute that blocks the click.
+          -->
+          <a href="#" class="btn btn--primary reg-card__btn" onclick="alert('Registration link not yet available. Check back soon!'); return false;">
+            Open Main Registration Form
+          </a>
+          <p class="reg-card__note">⚠ Placeholder link — replace with the real Microsoft Forms URL before publishing.</p>
+        </div>
+
+        <!-- Workshop Registration -->
+        <div class="reg-card reg-card--workshop reveal">
+          <div class="reg-card__header">
+            <div class="reg-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <h3>Register for the Kiro Starter Workshop</h3>
+              <p>For beginners or teams who need help getting started. Free to attend. Separate sign-up required.</p>
+            </div>
+          </div>
+
+          <!--
+            ================================================================
+            ORGANISER: Paste the Workshop Microsoft Forms iframe embed code below.
+            Delete the .forms-placeholder div and replace with:
+
+            <iframe
+              src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_WORKSHOP_FORM_ID&embed=1"
+              width="100%"
+              height="600"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              style="border: none; max-width: 100%;">
+              Loading form…
+            </iframe>
+            ================================================================
+          -->
+          <div class="forms-placeholder">
+            <div class="forms-placeholder__inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+              <span>Paste Microsoft Forms Embed Code Here</span>
+              <code>&lt;iframe src="YOUR_WORKSHOP_URL?embed=1" …&gt;&lt;/iframe&gt;</code>
+            </div>
+          </div>
+
+          <!--
+            ORGANISER: Replace href="#" with your actual Workshop Microsoft Forms URL.
+            Remove the onclick attribute that blocks the click.
+          -->
+          <a href="#" class="btn btn--outline reg-card__btn" onclick="alert('Workshop registration link not yet available. Check back soon!'); return false;">
+            Open Workshop Registration Form
+          </a>
+          <p class="reg-card__note">⚠ Placeholder link — replace with the real Microsoft Forms URL before publishing.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HELP & CONTACT ===== -->
+  <section class="help" id="help">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">We've got you</p>
+        <h2 class="section-title">Lost? Need Help?</h2>
+        <p class="section-subtitle">No question is too small. Reach out any time before or during the event.</p>
+      </div>
+
+      <div class="help__layout">
+
+        <div class="help__contacts reveal">
+
+          <div class="contact-card">
+            <div class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-card__label">Email</div>
+              <!-- ORGANISER: Replace with real contact email -->
+              <a href="mailto:cloudclub@mymail.nyp.edu.sg" class="contact-card__value">cloudclub@mymail.nyp.edu.sg</a>
+              <div class="contact-card__note">We aim to reply within 1 business day</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div class="contact-card__label">Telegram Group</div>
+              <!-- ORGANISER: Replace href with real Telegram invite link -->
+              <a href="#" class="contact-card__value" onclick="alert('Telegram link coming soon!'); return false;">Join the Event Telegram Group</a>
+              <div class="contact-card__note">Placeholder — replace with real invite link before publishing</div>
+            </div>
+          </div>
+
+          <div class="contact-card contact-card--emergency">
+            <div class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <div class="contact-card__label">Urgent Event-Day Help</div>
+              <div class="contact-card__value">Approach any organiser</div>
+              <div class="contact-card__note">Look for the NYP Cloud Computing Club T-shirt. Organisers are stationed throughout the venue all day.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="help__form reveal">
+          <h3>Send a message</h3>
+          <p class="help__form-note">
+            This form is a UI mock-up only and is not connected to a backend.
+            To actually reach us, use the email or Telegram links above.
+          </p>
+          <!-- UI form only — onsubmit is blocked; no backend -->
+          <form class="contact-form" onsubmit="return false;" novalidate>
+            <div class="contact-form__row">
+              <label for="cf-name">Your Name</label>
+              <input type="text" id="cf-name" autocomplete="name" placeholder="e.g. Alex Tan" />
+            </div>
+            <div class="contact-form__row">
+              <label for="cf-email">Your Email</label>
+              <input type="email" id="cf-email" autocomplete="email" placeholder="e.g. alex@mymail.nyp.edu.sg" />
+            </div>
+            <div class="contact-form__row">
+              <label for="cf-msg">Message</label>
+              <textarea id="cf-msg" rows="4" placeholder="What do you need help with?"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" onclick="alert('This form is not connected. Please email cloudclub@mymail.nyp.edu.sg or join the Telegram group instead.'); return false;">
+              Send Message
+            </button>
+            <p class="contact-form__disclaimer">This form is not functional. Email or Telegram is the way to reach us.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <div class="footer__logos">
+            <!-- ORGANISER: Replace with actual logo images -->
+            <div class="logo-pill logo-pill--nyp logo-pill--sm">NYP Cloud</div>
+            <span aria-hidden="true">×</span>
+            <div class="logo-pill logo-pill--aws logo-pill--sm">AWS</div>
+          </div>
+          <p class="footer__headline">AWS × NYP Cloud Kiro Buildathon</p>
+          <p class="footer__sub">Built for student builders.</p>
+          <p class="footer__copy">© 2026 NYP Cloud Computing Club. All rights reserved.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <h4>Event</h4>
+            <a href="#overview">Overview</a>
+            <a href="#dates">Dates</a>
+            <a href="#workshop">Workshop</a>
+            <a href="#problems">Problems</a>
+            <a href="#programme">Schedule</a>
+          </div>
+          <div class="footer__nav-col">
+            <h4>Info</h4>
+            <a href="#team-info">Team Rules</a>
+            <a href="#presentation">Presentation Guide</a>
+            <a href="#faq">FAQ</a>
+            <a href="#register">Register</a>
+            <a href="#help">Help</a>
+          </div>
+          <div class="footer__nav-col">
+            <h4>Connect</h4>
+            <!-- ORGANISER: Replace # with real links -->
+            <a href="#" onclick="return false;">Instagram</a>
+            <a href="#" onclick="return false;">LinkedIn</a>
+            <a href="#" onclick="return false;">Telegram</a>
+            <a href="mailto:cloudclub@mymail.nyp.edu.sg">Email Us</a>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ===== FLOATING HELP BUTTON ===== -->
+  <button class="floating-help" id="floatingHelp" aria-label="Need Help? Jump to help section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <span>Need Help?</span>
+  </button>
+
+  <!-- ===== MODAL: PROBLEM STATEMENT 1 ===== -->
+  <div class="modal" id="modal-ps1" role="dialog" aria-modal="true" aria-labelledby="modal-ps1-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="document">
+      <button class="modal__close" data-close aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal__header">
+        <div class="modal__eyebrow">
+          <span class="badge badge--beginner">Beginner Friendly</span>
+          <span class="modal__ps-label">Problem Statement 1</span>
+        </div>
+        <h2 id="modal-ps1-title">Community Health Navigator</h2>
+      </div>
+      <div class="modal__body">
+        <div class="modal__section">
+          <h3>The Challenge</h3>
+          <p>Many residents — especially elderly people and their caregivers — struggle to find clear, accurate information about local health services. Clinics are hard to locate, appointment processes are confusing, and wellness programmes go underused because people do not know they exist.</p>
+          <p>Your team's job: build a digital tool that makes it significantly easier for residents to navigate health services in their neighbourhood.</p>
+        </div>
+        <div class="modal__section">
+          <h3>Target Users</h3>
+          <ul>
+            <li>Elderly residents aged 60 and above</li>
+            <li>Caregivers managing health appointments for family members</li>
+            <li>Young adults helping parents find local health information</li>
+          </ul>
+        </div>
+        <div class="modal__section">
+          <h3>Example Ideas</h3>
+          <ul>
+            <li>A clinic finder with opening hours and specialities</li>
+            <li>An appointment reminder tool for regular health checks</li>
+            <li>A plain-language FAQ answering common health service questions</li>
+            <li>A resource directory for senior wellness programmes</li>
+          </ul>
+        </div>
+        <div class="modal__section">
+          <h3>How You Will Be Judged</h3>
+          <p>Judges look for: clarity of the solution, how well it addresses the target user's real needs, quality of the live demo, and the strength of your 4-minute presentation.</p>
+        </div>
+        <div class="modal__note">
+          <strong>Note:</strong> These are placeholder problem statement details. Actual problem statements will be released on 25 July 2026.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: PROBLEM STATEMENT 2 ===== -->
+  <div class="modal" id="modal-ps2" role="dialog" aria-modal="true" aria-labelledby="modal-ps2-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="document">
+      <button class="modal__close" data-close aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal__header">
+        <div class="modal__eyebrow">
+          <span class="badge badge--beginner">Beginner Friendly</span>
+          <span class="modal__ps-label">Problem Statement 2</span>
+        </div>
+        <h2 id="modal-ps2-title">Student Wellbeing Companion</h2>
+      </div>
+      <div class="modal__body">
+        <div class="modal__section">
+          <h3>The Challenge</h3>
+          <p>Student life can be stressful — deadlines, exams, and social pressures all take a toll. Many students are unaware of the mental health and wellbeing resources available to them, or find existing tools too generic to feel personal or useful.</p>
+          <p>Your team's job: design a companion tool that genuinely helps students manage stress, track their wellbeing, or find the support they need.</p>
+        </div>
+        <div class="modal__section">
+          <h3>Target Users</h3>
+          <ul>
+            <li>NYP students in any year and school</li>
+            <li>Students managing academic pressure or burnout</li>
+            <li>Students looking for peer support or campus counselling resources</li>
+          </ul>
+        </div>
+        <div class="modal__section">
+          <h3>Example Ideas</h3>
+          <ul>
+            <li>A daily mood tracker with gentle reflection prompts</li>
+            <li>A study-break timer with breathing or movement exercises</li>
+            <li>A resource directory linking to NYP counselling and peer support services</li>
+            <li>A simple peer support matching tool</li>
+          </ul>
+        </div>
+        <div class="modal__section">
+          <h3>How You Will Be Judged</h3>
+          <p>Judges look for: empathy and thoughtfulness in the design, usefulness to the target user, quality of the live demo, and the strength of your 4-minute presentation.</p>
+        </div>
+        <div class="modal__note">
+          <strong>Note:</strong> These are placeholder problem statement details. Actual problem statements will be released on 25 July 2026.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: PROBLEM STATEMENT 3 ===== -->
+  <div class="modal" id="modal-ps3" role="dialog" aria-modal="true" aria-labelledby="modal-ps3-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="document">
+      <button class="modal__close" data-close aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal__header">
+        <div class="modal__eyebrow">
+          <span class="badge badge--beginner">Beginner Friendly</span>
+          <span class="modal__ps-label">Problem Statement 3</span>
+        </div>
+        <h2 id="modal-ps3-title">Campus Sustainability Tracker</h2>
+      </div>
+      <div class="modal__body">
+        <div class="modal__section">
+          <h3>The Challenge</h3>
+          <p>NYP is committed to sustainability, but individual behaviour change is hard without visibility and motivation. Students and staff often do not know their environmental impact, or what small changes they can realistically make on campus.</p>
+          <p>Your team's job: build a tool that makes sustainable behaviour visible, trackable, and rewarding for the NYP campus community.</p>
+        </div>
+        <div class="modal__section">
+          <h3>Target Users</h3>
+          <ul>
+            <li>NYP students who want to live more sustainably</li>
+            <li>Campus staff managing facilities and operations</li>
+            <li>Student sustainability clubs and green teams</li>
+          </ul>
+        </div>
+        <div class="modal__section">
+          <h3>Example Ideas</h3>
+          <ul>
+            <li>A personal carbon footprint calculator for campus activities</li>
+            <li>A waste reduction tips and challenge tracker</li>
+            <li>An eco-habit streak app with daily actions</li>
+            <li>A campus resource map showing recycling points and green spaces</li>
+          </ul>
+        </div>
+        <div class="modal__section">
+          <h3>How You Will Be Judged</h3>
+          <p>Judges look for: real-world impact potential, usability of the solution for the target user, quality of the live demo, and the strength of your 4-minute presentation.</p>
+        </div>
+        <div class="modal__note">
+          <strong>Note:</strong> These are placeholder problem statement details. Actual problem statements will be released on 25 July 2026.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
