@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AWS × NYP Cloud Kiro Buildathon 2026</title>
   <meta name="description" content="Build, Learn, Present. The AWS × NYP Cloud Kiro Buildathon — teams use Kiro to create real solutions for real problem statements." />
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('site-theme');
+        var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = savedTheme || systemTheme;
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="nypcloud.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,9 +32,6 @@
         <span class="nav__logo-x">×</span>
         <span class="nav__logo-nyp">NYP</span>
       </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav__links" id="navLinks" role="list">
         <li><a href="#overview"     class="nav__link">Overview</a></li>
         <li><a href="#dates"        class="nav__link">Dates</a></li>
@@ -32,6 +41,14 @@
         <li><a href="#faq"          class="nav__link">FAQ</a></li>
         <li><a href="#register"     class="nav__link nav__link--cta">Register</a></li>
       </ul>
+      <button class="nav__theme" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="nav__theme-icon nav__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="nav__theme-icon nav__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="nav__theme-text">Dark</span>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -101,7 +118,7 @@
       <div class="hero__facts">
         <span class="hero__fact">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          20 August 2026
+          19 August 2026
         </span>
         <span class="hero__fact">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -136,7 +153,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <div class="quickinfo__label">Event Date</div>
-          <div class="quickinfo__value">20 Aug 2026</div>
+          <div class="quickinfo__value">19 Aug 2026</div>
         </div>
 
         <div class="quickinfo__card reveal">
@@ -300,23 +317,12 @@
           </div>
         </div>
 
-        <div class="timeline__item reveal">
-          <div class="timeline__dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          </div>
-          <div class="timeline__body">
-            <time class="timeline__date">19 August 2026 · 11:59 PM</time>
-            <h3 class="timeline__title">Final submission deadline</h3>
-            <p>Submit your project link before midnight. Late submissions may not be accepted by judges.</p>
-          </div>
-        </div>
-
         <div class="timeline__item timeline__item--main reveal">
           <div class="timeline__dot timeline__dot--main" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
           <div class="timeline__body">
-            <time class="timeline__date">20 August 2026 · 10:00 AM</time>
+            <time class="timeline__date">19 August 2026 · 10:00 AM</time>
             <h3 class="timeline__title">Main Showcase Day</h3>
             <p>The big day. Present your build, impress the judges, and celebrate with your team. Arrive by 10:00 AM.</p>
           </div>
@@ -404,8 +410,8 @@
 
       <div class="workshop__cta reveal">
         <!-- This button scrolls to the registration section -->
-        <a href="#register" class="btn btn--primary">Workshop Registration</a>
-        <p>Scroll to the registration section to sign up for the workshop separately.</p>
+        <a href="#register" class="btn btn--primary">Open Registration</a>
+        <p>Scroll to the registration section and use the combined form to indicate workshop attendance.</p>
       </div>
     </div>
   </section>
@@ -437,8 +443,8 @@
               <span>Upload materials, summarize key takeaways, generate quiz questions</span>
             </div>
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">AWS usage</span>
-              <span>S3 for file storage, Lambda for backend processing, Bedrock encouraged</span>
+              <span class="ps-card__meta-label">Required tool</span>
+              <span>Use Kiro to build and iterate. AWS services are optional add-ons.</span>
             </div>
           </div>
           <button class="btn btn--outline btn--sm" data-modal="modal-ps1">View Details</button>
@@ -460,8 +466,8 @@
               <span>Student profiles, tutoring needs, subject matching, availability matching</span>
             </div>
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">AWS usage</span>
-              <span>DynamoDB for profiles and match data, Lambda for match requests, Bedrock encouraged</span>
+              <span class="ps-card__meta-label">Required tool</span>
+              <span>Use Kiro to build and iterate. AWS services are optional add-ons.</span>
             </div>
           </div>
           <button class="btn btn--outline btn--sm" data-modal="modal-ps2">View Details</button>
@@ -483,8 +489,8 @@
               <span>Deadline recording, prioritisation, reminders, notifications</span>
             </div>
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">AWS usage</span>
-              <span>DynamoDB for tasks, Lambda for reminders, Bedrock encouraged for planning</span>
+              <span class="ps-card__meta-label">Required tool</span>
+              <span>Use Kiro to build and iterate. AWS services are optional add-ons.</span>
             </div>
           </div>
           <button class="btn btn--outline btn--sm" data-modal="modal-ps3">View Details</button>
@@ -560,7 +566,7 @@
   <section class="programme" id="programme">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-eyebrow">20 August 2026 · Main Event</p>
+        <p class="section-eyebrow">19 August 2026 · Main Event</p>
         <h2 class="section-title">Event Programme</h2>
         <p class="section-subtitle">Full schedule for showcase day. Arrive by 10:00 AM SGT.</p>
       </div>
@@ -848,12 +854,10 @@
       <div class="section-header reveal">
         <p class="section-eyebrow">Sign up</p>
         <h2 class="section-title">Registration</h2>
-        <p class="section-subtitle">Two forms: one for the main event, one for the optional workshop.</p>
+        <p class="section-subtitle">One form covers both the main event and the optional Kiro Starter Workshop.</p>
       </div>
 
       <div class="register__grid">
-
-        <!-- Main Event Registration -->
         <div class="reg-card reg-card--main reveal">
           <div class="reg-card__header">
             <div class="reg-card__icon" aria-hidden="true">
@@ -861,96 +865,25 @@
             </div>
             <div>
               <h3>Register for the Buildathon</h3>
-              <p>Form teams, rank your preferred problem statements, and secure your slot for the main event.</p>
+              <p>Use this single form to register for the main showcase and indicate whether you are joining the optional workshop.</p>
             </div>
           </div>
 
-          <!--
-            ================================================================
-            ORGANISER: Paste the Microsoft Forms iframe embed code below.
-            Delete the .forms-placeholder div and replace with:
+          <iframe
+            class="forms-embed"
+            src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=7bo-JNAAkEan3HWJOw2fmKN5hYq166FNveQBoFBwg7dUMkpIT1FDQ0Q1VEk1WTMyQzRTTk1ORzA1Si4u"
+            title="AWS x NYP Cloud Kiro Buildathon registration form"
+            loading="lazy">
+            Loading registration form...
+          </iframe>
 
-            <iframe
-              src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID&embed=1"
-              width="100%"
-              height="600"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border: none; max-width: 100%;">
-              Loading form…
-            </iframe>
-            ================================================================
-          -->
-          <div class="forms-placeholder">
-            <div class="forms-placeholder__inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
-              <span>Paste Microsoft Forms Embed Code Here</span>
-              <code>&lt;iframe src="YOUR_FORM_URL?embed=1" …&gt;&lt;/iframe&gt;</code>
-            </div>
-          </div>
-
-          <!--
-            ORGANISER: Replace href="#" with your actual Microsoft Forms URL.
-            Remove the onclick attribute that blocks the click.
-          -->
-          <a href="#" class="btn btn--primary reg-card__btn" onclick="alert('Registration link not yet available. Check back soon!'); return false;">
-            Open Main Registration Form
+          <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=7bo-JNAAkEan3HWJOw2fmKN5hYq166FNveQBoFBwg7dUMkpIT1FDQ0Q1VEk1WTMyQzRTTk1ORzA1Si4u" class="btn btn--primary reg-card__btn" target="_blank" rel="noopener">
+            Open Registration Form
           </a>
-          <p class="reg-card__note">⚠ Placeholder link — replace with the real Microsoft Forms URL before publishing.</p>
         </div>
-
-        <!-- Workshop Registration -->
-        <div class="reg-card reg-card--workshop reveal">
-          <div class="reg-card__header">
-            <div class="reg-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <div>
-              <h3>Register for the Kiro Starter Workshop</h3>
-              <p>For beginners or teams who need help getting started. Free to attend. Separate sign-up required.</p>
-            </div>
-          </div>
-
-          <!--
-            ================================================================
-            ORGANISER: Paste the Workshop Microsoft Forms iframe embed code below.
-            Delete the .forms-placeholder div and replace with:
-
-            <iframe
-              src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_WORKSHOP_FORM_ID&embed=1"
-              width="100%"
-              height="600"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border: none; max-width: 100%;">
-              Loading form…
-            </iframe>
-            ================================================================
-          -->
-          <div class="forms-placeholder">
-            <div class="forms-placeholder__inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
-              <span>Paste Microsoft Forms Embed Code Here</span>
-              <code>&lt;iframe src="YOUR_WORKSHOP_URL?embed=1" …&gt;&lt;/iframe&gt;</code>
-            </div>
-          </div>
-
-          <!--
-            ORGANISER: Replace href="#" with your actual Workshop Microsoft Forms URL.
-            Remove the onclick attribute that blocks the click.
-          -->
-          <a href="#" class="btn btn--outline reg-card__btn" onclick="alert('Workshop registration link not yet available. Check back soon!'); return false;">
-            Open Workshop Registration Form
-          </a>
-          <p class="reg-card__note">⚠ Placeholder link — replace with the real Microsoft Forms URL before publishing.</p>
-        </div>
-
       </div>
     </div>
   </section>
-
   <!-- ===== HELP & CONTACT ===== -->
   <section class="help" id="help">
     <div class="container">
@@ -1119,8 +1052,8 @@
           <p>Build a web or mobile tool that allows students to upload lecture slides or notes and receive a structured summary of key takeaways along with a short auto-generated quiz to test their understanding.</p>
         </div>
         <div class="modal__section">
-          <h3>Required AWS Usage</h3>
-          <p>Participants must incorporate at least one AWS service such as S3 for file storage or Lambda for backend processing. Use of AI services such as Amazon Bedrock is encouraged and will be recognised in judging.</p>
+          <h3>Required Tool</h3>
+          <p>Teams must use Kiro to plan, build, debug, or improve their solution. AWS services such as S3, Lambda, or Amazon Bedrock may be used if they fit the idea, but they are not required.</p>
         </div>
       </div>
     </div>
@@ -1154,8 +1087,8 @@
           <p>Build a platform where students can list subjects they are able to tutor and subjects they need help with, and get matched to compatible peers based on subject overlap and availability.</p>
         </div>
         <div class="modal__section">
-          <h3>Required AWS Usage</h3>
-          <p>Participants must incorporate at least one AWS service such as DynamoDB for storing student profiles and match data or Lambda for processing match requests. Use of AI services such as Amazon Bedrock is encouraged and will be recognised in judging.</p>
+          <h3>Required Tool</h3>
+          <p>Teams must use Kiro to plan, build, debug, or improve their solution. AWS services such as DynamoDB, Lambda, or Amazon Bedrock may be used if they fit the idea, but they are not required.</p>
         </div>
       </div>
     </div>
@@ -1189,8 +1122,8 @@
           <p>Build a platform that allows students to record test dates, assignment submission dates, and presentation dates. The platform should help students stay organised by providing reminders and notifications for upcoming deadlines, such as &quot;Test in 3 days&quot; or &quot;Assignment due in 24 hours&quot;.</p>
         </div>
         <div class="modal__section">
-          <h3>Required AWS Usage</h3>
-          <p>Participants must incorporate at least one AWS service such as DynamoDB for storing task information or Lambda for processing reminders and notifications. Use of AI services such as Amazon Bedrock for study planning, workload analysis, or task prioritisation suggestions is encouraged and will be recognised in judging.</p>
+          <h3>Required Tool</h3>
+          <p>Teams must use Kiro to plan, build, debug, or improve their solution. AWS services such as DynamoDB, Lambda, or Amazon Bedrock may be used if they fit the idea, but they are not required.</p>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
 const CONFIG = {
   // Main event date/time in Singapore Time (SGT = UTC+8)
   // Format: 'YYYY-MM-DDTHH:MM:00+08:00'
-  eventDate: '2026-08-20T10:00:00+08:00',
+  eventDate: '2026-08-19T10:00:00+08:00',
 
   // Section IDs used for navigation highlight (must match id="" in HTML)
   navSections: [
@@ -41,7 +41,61 @@ function throttle(fn, ms) {
 }
 
 /* ----------------------------------------------------------------
-   1. NAVIGATION: sticky style on scroll + mobile toggle
+   1. THEME TOGGLE
+   ---------------------------------------------------------------- */
+(function initTheme() {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const storageKey = 'site-theme';
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function storedTheme() {
+    try {
+      return localStorage.getItem(storageKey);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function systemTheme() {
+    return media.matches ? 'dark' : 'light';
+  }
+
+  function setTheme(theme, persist) {
+    const nextTheme = theme === 'dark' ? 'dark' : 'light';
+    root.dataset.theme = nextTheme;
+
+    if (persist) {
+      try {
+        localStorage.setItem(storageKey, nextTheme);
+      } catch (error) {
+        // Ignore storage failures; the toggle still works for this page view.
+      }
+    }
+
+    if (!toggle) return;
+    const isDark = nextTheme === 'dark';
+    toggle.setAttribute('aria-pressed', String(isDark));
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    const label = toggle.querySelector('.nav__theme-text');
+    if (label) label.textContent = isDark ? 'Light' : 'Dark';
+  }
+
+  setTheme(storedTheme() || root.dataset.theme || systemTheme(), false);
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
+    });
+  }
+
+  media.addEventListener('change', () => {
+    if (!storedTheme()) setTheme(systemTheme(), false);
+  });
+})();
+
+/* ----------------------------------------------------------------
+   2. NAVIGATION: sticky style on scroll + mobile toggle
    ---------------------------------------------------------------- */
 (function initNav() {
   const nav     = document.getElementById('nav');
