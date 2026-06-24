@@ -427,18 +427,18 @@
             <span class="badge badge--beginner">Beginner Friendly</span>
             <span class="ps-card__num">PS 1</span>
           </div>
-          <h3 class="ps-card__title">Community Health Navigator</h3>
+          <h3 class="ps-card__title">Automated Class Recap Generator</h3>
           <p class="ps-card__desc">
-            Make it easier for residents to find and understand local health services, clinics, and wellness programmes in their neighbourhood.
+            Help students upload lecture slides or notes and receive a structured summary plus a short quiz to check their understanding.
           </p>
           <div class="ps-card__meta">
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">Target users</span>
-              <span>Elderly residents, caregivers, families</span>
+              <span class="ps-card__meta-label">Core build</span>
+              <span>Upload materials, summarize key takeaways, generate quiz questions</span>
             </div>
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">Example ideas</span>
-              <span>Clinic finder, appointment reminder, health FAQ chatbot</span>
+              <span class="ps-card__meta-label">AWS usage</span>
+              <span>S3 for file storage, Lambda for backend processing, Bedrock encouraged</span>
             </div>
           </div>
           <button class="btn btn--outline btn--sm" data-modal="modal-ps1">View Details</button>
@@ -450,18 +450,18 @@
             <span class="badge badge--beginner">Beginner Friendly</span>
             <span class="ps-card__num">PS 2</span>
           </div>
-          <h3 class="ps-card__title">Student Wellbeing Companion</h3>
+          <h3 class="ps-card__title">Peer Tutoring Platform</h3>
           <p class="ps-card__desc">
-            Support student mental health with a tool that helps students manage stress, track mood, or connect with campus resources.
+            Match students who need help with peers who can tutor specific modules based on subject overlap and availability.
           </p>
           <div class="ps-card__meta">
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">Target users</span>
-              <span>NYP students, polytechnic students</span>
+              <span class="ps-card__meta-label">Core build</span>
+              <span>Student profiles, tutoring needs, subject matching, availability matching</span>
             </div>
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">Example ideas</span>
-              <span>Mood tracker, study-break timer, resource directory</span>
+              <span class="ps-card__meta-label">AWS usage</span>
+              <span>DynamoDB for profiles and match data, Lambda for match requests, Bedrock encouraged</span>
             </div>
           </div>
           <button class="btn btn--outline btn--sm" data-modal="modal-ps2">View Details</button>
@@ -473,18 +473,18 @@
             <span class="badge badge--beginner">Beginner Friendly</span>
             <span class="ps-card__num">PS 3</span>
           </div>
-          <h3 class="ps-card__title">Campus Sustainability Tracker</h3>
+          <h3 class="ps-card__title">Assignment Deadline Tracker</h3>
           <p class="ps-card__desc">
-            Help NYP students and staff reduce their environmental footprint with a tool that makes sustainable choices visible and easy.
+            Help students record assignment, test, project, and presentation dates, then receive reminders for upcoming deadlines.
           </p>
           <div class="ps-card__meta">
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">Target users</span>
-              <span>NYP students, campus staff</span>
+              <span class="ps-card__meta-label">Core build</span>
+              <span>Deadline recording, prioritisation, reminders, notifications</span>
             </div>
             <div class="ps-card__meta-row">
-              <span class="ps-card__meta-label">Example ideas</span>
-              <span>Carbon footprint calculator, waste tracker, eco-challenge app</span>
+              <span class="ps-card__meta-label">AWS usage</span>
+              <span>DynamoDB for tasks, Lambda for reminders, Bedrock encouraged for planning</span>
             </div>
           </div>
           <button class="btn btn--outline btn--sm" data-modal="modal-ps3">View Details</button>
@@ -1103,37 +1103,24 @@
           <span class="badge badge--beginner">Beginner Friendly</span>
           <span class="modal__ps-label">Problem Statement 1</span>
         </div>
-        <h2 id="modal-ps1-title">Community Health Navigator</h2>
+        <h2 id="modal-ps1-title">Automated Class Recap Generator</h2>
       </div>
       <div class="modal__body">
         <div class="modal__section">
-          <h3>The Challenge</h3>
-          <p>Many residents — especially elderly people and their caregivers — struggle to find clear, accurate information about local health services. Clinics are hard to locate, appointment processes are confusing, and wellness programmes go underused because people do not know they exist.</p>
-          <p>Your team's job: build a digital tool that makes it significantly easier for residents to navigate health services in their neighbourhood.</p>
+          <h3>Background</h3>
+          <p>Polytechnic students frequently miss lectures or struggle to consolidate key information from dense lecture materials. Manually reviewing full slide decks is time-consuming and ineffective, especially during exam periods.</p>
         </div>
         <div class="modal__section">
-          <h3>Target Users</h3>
-          <ul>
-            <li>Elderly residents aged 60 and above</li>
-            <li>Caregivers managing health appointments for family members</li>
-            <li>Young adults helping parents find local health information</li>
-          </ul>
+          <h3>Problem</h3>
+          <p>Students lack a fast and reliable way to extract the most important information from their lecture materials and assess their own understanding.</p>
         </div>
         <div class="modal__section">
-          <h3>Example Ideas</h3>
-          <ul>
-            <li>A clinic finder with opening hours and specialities</li>
-            <li>An appointment reminder tool for regular health checks</li>
-            <li>A plain-language FAQ answering common health service questions</li>
-            <li>A resource directory for senior wellness programmes</li>
-          </ul>
+          <h3>Challenge</h3>
+          <p>Build a web or mobile tool that allows students to upload lecture slides or notes and receive a structured summary of key takeaways along with a short auto-generated quiz to test their understanding.</p>
         </div>
         <div class="modal__section">
-          <h3>How You Will Be Judged</h3>
-          <p>Judges look for: clarity of the solution, how well it addresses the target user's real needs, quality of the live demo, and the strength of your 4-minute presentation.</p>
-        </div>
-        <div class="modal__note">
-          <strong>Note:</strong> These are placeholder problem statement details. Actual problem statements will be released on 25 July 2026.
+          <h3>Required AWS Usage</h3>
+          <p>Participants must incorporate at least one AWS service such as S3 for file storage or Lambda for backend processing. Use of AI services such as Amazon Bedrock is encouraged and will be recognised in judging.</p>
         </div>
       </div>
     </div>
@@ -1151,37 +1138,24 @@
           <span class="badge badge--beginner">Beginner Friendly</span>
           <span class="modal__ps-label">Problem Statement 2</span>
         </div>
-        <h2 id="modal-ps2-title">Student Wellbeing Companion</h2>
+        <h2 id="modal-ps2-title">Peer Tutoring Platform</h2>
       </div>
       <div class="modal__body">
         <div class="modal__section">
-          <h3>The Challenge</h3>
-          <p>Student life can be stressful — deadlines, exams, and social pressures all take a toll. Many students are unaware of the mental health and wellbeing resources available to them, or find existing tools too generic to feel personal or useful.</p>
-          <p>Your team's job: design a companion tool that genuinely helps students manage stress, track their wellbeing, or find the support they need.</p>
+          <h3>Background</h3>
+          <p>Polytechnic students often struggle with specific modules but have no structured way to find peers who can help. Existing channels like group chats are unorganised and unreliable, making it hard to connect students who need help with those who can provide it.</p>
         </div>
         <div class="modal__section">
-          <h3>Target Users</h3>
-          <ul>
-            <li>NYP students in any year and school</li>
-            <li>Students managing academic pressure or burnout</li>
-            <li>Students looking for peer support or campus counselling resources</li>
-          </ul>
+          <h3>Problem</h3>
+          <p>There is no easy way for students to find and connect with peers who are willing and available to tutor them in specific subjects that match their schedule.</p>
         </div>
         <div class="modal__section">
-          <h3>Example Ideas</h3>
-          <ul>
-            <li>A daily mood tracker with gentle reflection prompts</li>
-            <li>A study-break timer with breathing or movement exercises</li>
-            <li>A resource directory linking to NYP counselling and peer support services</li>
-            <li>A simple peer support matching tool</li>
-          </ul>
+          <h3>Challenge</h3>
+          <p>Build a platform where students can list subjects they are able to tutor and subjects they need help with, and get matched to compatible peers based on subject overlap and availability.</p>
         </div>
         <div class="modal__section">
-          <h3>How You Will Be Judged</h3>
-          <p>Judges look for: empathy and thoughtfulness in the design, usefulness to the target user, quality of the live demo, and the strength of your 4-minute presentation.</p>
-        </div>
-        <div class="modal__note">
-          <strong>Note:</strong> These are placeholder problem statement details. Actual problem statements will be released on 25 July 2026.
+          <h3>Required AWS Usage</h3>
+          <p>Participants must incorporate at least one AWS service such as DynamoDB for storing student profiles and match data or Lambda for processing match requests. Use of AI services such as Amazon Bedrock is encouraged and will be recognised in judging.</p>
         </div>
       </div>
     </div>
@@ -1199,37 +1173,24 @@
           <span class="badge badge--beginner">Beginner Friendly</span>
           <span class="modal__ps-label">Problem Statement 3</span>
         </div>
-        <h2 id="modal-ps3-title">Campus Sustainability Tracker</h2>
+        <h2 id="modal-ps3-title">Assignment Deadline Tracker</h2>
       </div>
       <div class="modal__body">
         <div class="modal__section">
-          <h3>The Challenge</h3>
-          <p>NYP is committed to sustainability, but individual behaviour change is hard without visibility and motivation. Students and staff often do not know their environmental impact, or what small changes they can realistically make on campus.</p>
-          <p>Your team's job: build a tool that makes sustainable behaviour visible, trackable, and rewarding for the NYP campus community.</p>
+          <h3>Background</h3>
+          <p>Polytechnic students often manage multiple assignments, tests, projects, and presentations across different modules. Keeping track of important dates can be challenging, especially during busy academic periods.</p>
         </div>
         <div class="modal__section">
-          <h3>Target Users</h3>
-          <ul>
-            <li>NYP students who want to live more sustainably</li>
-            <li>Campus staff managing facilities and operations</li>
-            <li>Student sustainability clubs and green teams</li>
-          </ul>
+          <h3>Problem</h3>
+          <p>Students need a simple and convenient way to keep track of upcoming deadlines and prioritise their tasks effectively.</p>
         </div>
         <div class="modal__section">
-          <h3>Example Ideas</h3>
-          <ul>
-            <li>A personal carbon footprint calculator for campus activities</li>
-            <li>A waste reduction tips and challenge tracker</li>
-            <li>An eco-habit streak app with daily actions</li>
-            <li>A campus resource map showing recycling points and green spaces</li>
-          </ul>
+          <h3>Challenge</h3>
+          <p>Build a platform that allows students to record test dates, assignment submission dates, and presentation dates. The platform should help students stay organised by providing reminders and notifications for upcoming deadlines, such as &quot;Test in 3 days&quot; or &quot;Assignment due in 24 hours&quot;.</p>
         </div>
         <div class="modal__section">
-          <h3>How You Will Be Judged</h3>
-          <p>Judges look for: real-world impact potential, usability of the solution for the target user, quality of the live demo, and the strength of your 4-minute presentation.</p>
-        </div>
-        <div class="modal__note">
-          <strong>Note:</strong> These are placeholder problem statement details. Actual problem statements will be released on 25 July 2026.
+          <h3>Required AWS Usage</h3>
+          <p>Participants must incorporate at least one AWS service such as DynamoDB for storing task information or Lambda for processing reminders and notifications. Use of AI services such as Amazon Bedrock for study planning, workload analysis, or task prioritisation suggestions is encouraged and will be recognised in judging.</p>
         </div>
       </div>
     </div>
