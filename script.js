@@ -283,13 +283,17 @@ function throttle(fn, ms) {
         if (other !== button) {
           other.setAttribute('aria-expanded', 'false');
           const otherAnswer = other.closest('.faq__item').querySelector('.faq__a');
-          if (otherAnswer) otherAnswer.hidden = true;
+          if (otherAnswer) {
+            otherAnswer.classList.remove('faq__a--open');
+            otherAnswer.setAttribute('aria-hidden', 'true');
+          }
         }
       });
 
       // Toggle current
       button.setAttribute('aria-expanded', String(!isOpen));
-      answer.hidden = isOpen;
+      answer.classList.toggle('faq__a--open', !isOpen);
+      answer.setAttribute('aria-hidden', String(isOpen));
     });
   });
 })();

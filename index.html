@@ -58,29 +58,20 @@
     <div class="hero__bg-word" aria-hidden="true">KIRO</div>
 
     <div class="hero__container">
-      <!-- Partner logos row -->
-      <div class="hero__logos" aria-label="Event partners">
-        <div class="logo-pill logo-pill--nyp">
-          <!-- ORGANISER: Replace inner text with <img> tag pointing to the actual NYP Cloud Computing Club logo -->
-          <span>NYP Cloud<br>Computing Club</span>
-        </div>
-        <span class="hero__logos-x" aria-hidden="true">×</span>
-        <div class="logo-pill logo-pill--aws">
-          <!-- ORGANISER: Replace inner text with <img> tag pointing to the actual AWS logo -->
-          <span>AWS</span>
-        </div>
-        <span class="hero__logos-x" aria-hidden="true">×</span>
-        <div class="logo-pill logo-pill--builder">
-          <!-- ORGANISER: Replace inner text with <img> tag pointing to the actual AWS Student Builder logo -->
-          <span>AWS Student<br>Builder</span>
-        </div>
+      <!-- Partner row — clean inline text -->
+      <div class="hero__partners" aria-label="Event partners">
+        <span class="hero__partner">NYP Cloud Computing Club</span>
+        <span class="hero__partners-sep" aria-hidden="true">×</span>
+        <span class="hero__partner">Amazon Web Services</span>
+        <span class="hero__partners-sep" aria-hidden="true">×</span>
+        <span class="hero__partner">AWS Student Builder</span>
       </div>
 
       <p class="hero__eyebrow">Student Buildathon 2026</p>
 
       <h1 class="hero__title">
         AWS <em class="hero__title-x">×</em> NYP<br>
-        <span class="hero__title-kiro">Cloud Kiro</span><br>
+        <span class="hero__title-kiro">Cloud&nbsp;Kiro</span><br>
         Buildathon
       </h1>
 
@@ -131,7 +122,7 @@
       </div>
 
       <div class="hero__actions">
-        <a href="#programme" class="btn btn--primary">View Event Schedule</a>
+        <a href="#programme" class="btn btn--white">View Event Schedule</a>
         <!-- Register Now scrolls to the Microsoft Forms registration section -->
         <a href="#register"  class="btn btn--ghost">Register Now</a>
       </div>
@@ -255,7 +246,6 @@
   <section class="dates" id="dates">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-eyebrow">Mark your calendar</p>
         <h2 class="section-title">Important Dates</h2>
         <p class="section-subtitle">All times are Singapore Time (SGT, UTC+8).</p>
       </div>
@@ -430,7 +420,6 @@
         <!-- PS 1 -->
         <article class="ps-card reveal">
           <div class="ps-card__top">
-            <span class="badge badge--beginner">Beginner Friendly</span>
             <span class="ps-card__num">PS 1</span>
           </div>
           <h3 class="ps-card__title">Automated Class Recap Generator</h3>
@@ -451,9 +440,8 @@
         </article>
 
         <!-- PS 2 -->
-        <article class="ps-card ps-card--featured reveal">
+        <article class="ps-card reveal">
           <div class="ps-card__top">
-            <span class="badge badge--beginner">Beginner Friendly</span>
             <span class="ps-card__num">PS 2</span>
           </div>
           <h3 class="ps-card__title">Peer Tutoring Platform</h3>
@@ -476,7 +464,6 @@
         <!-- PS 3 -->
         <article class="ps-card reveal">
           <div class="ps-card__top">
-            <span class="badge badge--beginner">Beginner Friendly</span>
             <span class="ps-card__num">PS 3</span>
           </div>
           <h3 class="ps-card__title">Assignment Deadline Tracker</h3>
@@ -504,7 +491,6 @@
   <section class="team-info section--alt" id="team-info">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-eyebrow">Rules &amp; expectations</p>
         <h2 class="section-title">Team &amp; Submission Details</h2>
       </div>
 
@@ -661,7 +647,6 @@
   <section class="presentation section--alt" id="presentation">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-eyebrow">On stage</p>
         <h2 class="section-title">Presentation Guide</h2>
         <p class="section-subtitle">Everything you need to know before you step up to present.</p>
       </div>
@@ -747,7 +732,6 @@
   <section class="faq" id="faq">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-eyebrow">Common questions</p>
         <h2 class="section-title">FAQ</h2>
         <p class="section-subtitle">Quick answers to things students usually ask before signing up.</p>
       </div>
@@ -759,7 +743,7 @@
             Do I need coding experience?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>No. Kiro is an AI coding assistant that writes and edits code based on what you describe in plain English. You do not need to know how to code. If you have an idea and can describe it, Kiro can help you build it.</p>
           </div>
         </div>
@@ -769,7 +753,7 @@
             Do I need to attend the optional workshop?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>The workshop is completely optional. If you are already comfortable using Kiro and have a project started, you do not need to come. But if you have not installed Kiro yet, or want guided help building something from scratch, the workshop is a great starting point.</p>
           </div>
         </div>
@@ -779,7 +763,7 @@
             Can I start building before the main event?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>Yes — and you are encouraged to. Problem statements are released on 25 July, nearly a month before the main event. Use that time to plan, experiment, and build. There is no restriction on when you can start.</p>
           </div>
         </div>
@@ -789,7 +773,7 @@
             Can I use a single HTML file?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>Absolutely. A single well-made HTML file is a completely valid submission. Kiro is great at building complete apps in a single file. Focus on solving the problem well — the technology choice is up to you.</p>
           </div>
         </div>
@@ -799,7 +783,7 @@
             Do I need an AWS account?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>Not necessarily. Kiro can be used without deploying to AWS. You can build and host your project for free using Netlify or GitHub Pages. If you want to explore AWS services, the organisers can share guidance — but it is not required to participate.</p>
           </div>
         </div>
@@ -809,7 +793,7 @@
             What happens if my team is not ready by presentation day?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>Contact the organisers as early as possible — do not wait until the last minute. Even an unfinished project can be presented. Explain what you built, what you tried, and what you learned. Judges appreciate honesty and visible effort.</p>
           </div>
         </div>
@@ -819,7 +803,7 @@
             Can I deploy using Netlify?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>Yes. Netlify is free, beginner-friendly, and great for static websites. The Kiro Starter Workshop walks you through it. You can also use GitHub Pages or any other public hosting — as long as the judges can access your project via a link.</p>
           </div>
         </div>
@@ -829,7 +813,7 @@
             How are problem statements allocated?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>When you sign up, you rank all three problem statements by preference. Organisers match each team to their first choice where possible. If a track is full, teams move to their second choice. Final allocations are confirmed by 1 August.</p>
           </div>
         </div>
@@ -839,7 +823,7 @@
             What should I do if I am lost or need help?
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__a" hidden>
+          <div class="faq__a" aria-hidden="true">
             <p>During the event, approach any organiser wearing the NYP Cloud Computing Club T-shirt. Before the event, reach out via the Telegram group or email listed in the Help section below. No question is too small.</p>
           </div>
         </div>
@@ -971,11 +955,10 @@
       <div class="footer__inner">
 
         <div class="footer__brand">
-          <div class="footer__logos">
-            <!-- ORGANISER: Replace with actual logo images -->
-            <div class="logo-pill logo-pill--nyp logo-pill--sm">NYP Cloud</div>
+          <div class="footer__brand-names">
+            <span>NYP Cloud</span>
             <span aria-hidden="true">×</span>
-            <div class="logo-pill logo-pill--aws logo-pill--sm">AWS</div>
+            <span>AWS</span>
           </div>
           <p class="footer__headline">AWS × NYP Cloud Kiro Buildathon</p>
           <p class="footer__sub">Built for student builders.</p>
@@ -1033,7 +1016,6 @@
       </button>
       <div class="modal__header">
         <div class="modal__eyebrow">
-          <span class="badge badge--beginner">Beginner Friendly</span>
           <span class="modal__ps-label">Problem Statement 1</span>
         </div>
         <h2 id="modal-ps1-title">Automated Class Recap Generator</h2>
@@ -1068,7 +1050,6 @@
       </button>
       <div class="modal__header">
         <div class="modal__eyebrow">
-          <span class="badge badge--beginner">Beginner Friendly</span>
           <span class="modal__ps-label">Problem Statement 2</span>
         </div>
         <h2 id="modal-ps2-title">Peer Tutoring Platform</h2>
@@ -1103,7 +1084,6 @@
       </button>
       <div class="modal__header">
         <div class="modal__eyebrow">
-          <span class="badge badge--beginner">Beginner Friendly</span>
           <span class="modal__ps-label">Problem Statement 3</span>
         </div>
         <h2 id="modal-ps3-title">Assignment Deadline Tracker</h2>
