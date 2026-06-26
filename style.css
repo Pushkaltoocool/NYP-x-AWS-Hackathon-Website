@@ -1,5 +1,5 @@
 /* ================================================================
-   AWS × NYP Cloud Kiro Buildathon — style.css
+   AWS × NYP Cloud Kiro Hackathon — style.css
    Theme: Kiro Purple — committed, dark hero, builder energy.
    ================================================================ */
 
@@ -605,6 +605,34 @@ html[data-theme="dark"] .hero {
   animation: heroFadeUp 0.55s 0.08s var(--ease-out) both;
 }
 
+/* "Powered by Kiro" badge */
+.hero__kiro {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
+  margin-bottom: var(--space-5);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  animation: heroFadeUp 0.55s 0.11s var(--ease-out) both;
+}
+.hero__kiro-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px oklch(0.51 0.27 293 / 0.45);
+}
+.hero__kiro-text {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.01em;
+}
+.hero__kiro-text strong { color: #fff; font-weight: 700; }
+
 .hero__title {
   font-family: var(--font-display);
   font-size: clamp(var(--text-5xl), 7vw, var(--text-6xl));
@@ -953,6 +981,13 @@ html[data-theme="dark"] .timeline__item--main .timeline__body {
   text-align: center;
   margin-bottom: var(--space-10);
 }
+.workshop__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  margin: 0 auto var(--space-4);
+  box-shadow: var(--shadow-md);
+}
 .workshop__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -997,6 +1032,14 @@ html[data-theme="dark"] .workshop__step-num { color: oklch(0.68 0.22 293 / 0.10)
   margin-bottom: var(--space-2);
 }
 .workshop__step p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.6; }
+/* Desktop: 4 cards per row (8-col grid, each card spans 2). With 7 steps the
+   bottom row holds 3 — offset the 5th card to column 2 so the trailing row
+   centers, leaving one empty column on each side. */
+@media (min-width: 901px) {
+  .workshop__grid { grid-template-columns: repeat(8, 1fr); }
+  .workshop__step { grid-column: span 2; }
+  .workshop__step:nth-child(5) { grid-column: 2 / span 2; }
+}
 .workshop__cta {
   text-align: center;
   display: flex;
@@ -1323,6 +1366,21 @@ html[data-theme="dark"] .programme__table thead {
   overflow: hidden;
   transition: border-color var(--duration) var(--ease-out);
 }
+/* FAQ rows get a cleaner, springier fade-up than the generic .reveal:
+   a longer travel, soft blur, and no scale (scaling wide rows looks skewed). */
+.faq__item.reveal {
+  transform: translateY(34px);
+  filter: blur(6px);
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.7s var(--ease-out),
+    filter 0.6s var(--ease-out),
+    border-color var(--duration) var(--ease-out);
+}
+.faq__item.reveal.is-visible {
+  transform: translateY(0);
+  filter: blur(0);
+}
 .faq__item:has(.faq__q[aria-expanded="true"]) {
   border-color: var(--accent);
 }
@@ -1554,6 +1612,25 @@ html[data-theme="dark"] .help__form-note {
   background: var(--surface);
 }
 .contact-form__disclaimer { font-size: var(--text-xs); color: var(--text-muted); text-align: center; }
+.contact-form__status {
+  font-size: var(--text-sm);
+  text-align: center;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid transparent;
+}
+.contact-form__status--pending { color: var(--text-muted); }
+.contact-form__status--success {
+  color: oklch(0.78 0.16 150);
+  background: oklch(0.78 0.16 150 / 0.1);
+  border-color: oklch(0.78 0.16 150 / 0.3);
+}
+.contact-form__status--error {
+  color: oklch(0.72 0.2 25);
+  background: oklch(0.72 0.2 25 / 0.1);
+  border-color: oklch(0.72 0.2 25 / 0.3);
+}
 
 /* ----------------------------------------------------------------
    17. FOOTER
