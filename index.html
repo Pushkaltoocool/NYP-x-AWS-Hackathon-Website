@@ -38,6 +38,7 @@
         <li><a href="#workshop"     class="nav__link">Workshop</a></li>
         <li><a href="#problems"     class="nav__link">Problems</a></li>
         <li><a href="#programme"    class="nav__link">Schedule</a></li>
+        <li><a href="#rubric"       class="nav__link">Judging</a></li>
         <li><a href="#faq"          class="nav__link">FAQ</a></li>
         <li><a href="#register"     class="nav__link nav__link--cta">Register</a></li>
       </ul>
@@ -728,6 +729,113 @@
     </div>
   </section>
 
+  <!-- ===== JUDGING RUBRIC ===== -->
+  <section class="rubric" id="rubric">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">How you're scored</p>
+        <h2 class="section-title">Judging Rubric</h2>
+        <p class="section-subtitle">Judges score every team out of 50 points, with up to 5 bonus points for meaningful AI use.</p>
+      </div>
+
+      <div class="rubric__grid">
+
+        <!-- Cloud Implementation -->
+        <article class="rubric-card reveal">
+          <div class="rubric-card__head">
+            <div class="rubric-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <span class="rubric-card__score">15<span class="rubric-card__score-unit">pts</span></span>
+          </div>
+          <h3 class="rubric-card__title">Cloud Implementation</h3>
+          <p class="rubric-card__focus"><span class="rubric-card__tag">Focus</span>Did the team meaningfully use at least one AWS service as a core part of their solution?</p>
+          <p class="rubric-card__full"><span class="rubric-card__tag rubric-card__tag--full">Full marks</span>AWS service is central to the solution, not just mentioned. Deployment works and the team can explain why they chose the service.</p>
+        </article>
+
+        <!-- Solution Relevance -->
+        <article class="rubric-card reveal">
+          <div class="rubric-card__head">
+            <div class="rubric-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <span class="rubric-card__score">10<span class="rubric-card__score-unit">pts</span></span>
+          </div>
+          <h3 class="rubric-card__title">Solution Relevance</h3>
+          <p class="rubric-card__focus"><span class="rubric-card__tag">Focus</span>Does the solution directly address the chosen problem statement?</p>
+          <p class="rubric-card__full"><span class="rubric-card__tag rubric-card__tag--full">Full marks</span>The solution clearly solves the stated problem. The team understands the target user and has built for them.</p>
+        </article>
+
+        <!-- Technical Complexity -->
+        <article class="rubric-card reveal">
+          <div class="rubric-card__head">
+            <div class="rubric-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="rubric-card__score">10<span class="rubric-card__score-unit">pts</span></span>
+          </div>
+          <h3 class="rubric-card__title">Technical Complexity</h3>
+          <p class="rubric-card__focus"><span class="rubric-card__tag">Focus</span>How technically challenging is what the team built within the time given?</p>
+          <p class="rubric-card__full"><span class="rubric-card__tag rubric-card__tag--full">Full marks</span>The solution goes beyond a basic form or CRUD app. Multiple features or logic layers are implemented and working.</p>
+        </article>
+
+        <!-- User Experience -->
+        <article class="rubric-card reveal">
+          <div class="rubric-card__head">
+            <div class="rubric-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <span class="rubric-card__score">8<span class="rubric-card__score-unit">pts</span></span>
+          </div>
+          <h3 class="rubric-card__title">User Experience</h3>
+          <p class="rubric-card__focus"><span class="rubric-card__tag">Focus</span>Is the prototype usable and intuitive for the target user?</p>
+          <p class="rubric-card__full"><span class="rubric-card__tag rubric-card__tag--full">Full marks</span>The interface is clean and easy to navigate. A first-time user could complete the core task without guidance.</p>
+        </article>
+
+        <!-- Presentation & Demo -->
+        <article class="rubric-card reveal">
+          <div class="rubric-card__head">
+            <div class="rubric-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <span class="rubric-card__score">7<span class="rubric-card__score-unit">pts</span></span>
+          </div>
+          <h3 class="rubric-card__title">Presentation &amp; Demo</h3>
+          <p class="rubric-card__focus"><span class="rubric-card__tag">Focus</span>How clearly did the team explain their solution and demonstrate it live?</p>
+          <p class="rubric-card__full"><span class="rubric-card__tag rubric-card__tag--full">Full marks</span>The team clearly articulates the problem, their solution, and the tech stack. The demo works live and highlights key features.</p>
+        </article>
+
+        <!-- Kiro Usage Bonus -->
+        <article class="rubric-card rubric-card--bonus reveal">
+          <div class="rubric-card__head">
+            <div class="rubric-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span class="rubric-card__score rubric-card__score--bonus">+5<span class="rubric-card__score-unit">bonus</span></span>
+          </div>
+          <h3 class="rubric-card__title">Kiro &amp; AI Usage <span class="badge badge--bonus">Bonus</span></h3>
+          <p class="rubric-card__focus"><span class="rubric-card__tag">Focus</span>Did the team incorporate AI meaningfully using services like Amazon Bedrock?</p>
+          <p class="rubric-card__full"><span class="rubric-card__tag rubric-card__tag--full">Full marks</span>AI is used in a way that genuinely improves the solution, not just bolted on.</p>
+        </article>
+
+      </div>
+
+      <!-- Total bar -->
+      <div class="rubric__total reveal">
+        <div class="rubric__total-label">
+          <span class="rubric__total-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          <span>Total Score</span>
+        </div>
+        <div class="rubric__total-value">
+          <strong>50</strong> points
+          <span class="rubric__total-bonus">+5 bonus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FAQ ===== -->
   <section class="faq" id="faq">
     <div class="container">
@@ -978,6 +1086,7 @@
             <h4>Info</h4>
             <a href="#team-info">Team Rules</a>
             <a href="#presentation">Presentation Guide</a>
+            <a href="#rubric">Judging Rubric</a>
             <a href="#faq">FAQ</a>
             <a href="#register">Register</a>
             <a href="#help">Help</a>

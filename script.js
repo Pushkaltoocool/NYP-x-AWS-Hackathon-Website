@@ -14,7 +14,7 @@ const CONFIG = {
   // Section IDs used for navigation highlight (must match id="" in HTML)
   navSections: [
     'hero', 'quickinfo', 'overview', 'dates', 'workshop',
-    'problems', 'team-info', 'programme', 'presentation', 'faq',
+    'problems', 'team-info', 'programme', 'presentation', 'rubric', 'faq',
     'register', 'help',
   ],
 };
