@@ -1,5 +1,5 @@
 /* ================================================================
-   AWS × NYP Cloud Kiro Buildathon — script.js
+   AWS × NYP Cloud Kiro Hackathon — script.js
    No external libraries. Works by double-clicking index.html.
    ================================================================ */
 
